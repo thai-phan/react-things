@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 // import Button from './Button';
 // import Game from './Game';
 // import FontAwesome from 'react-fontawesome';
@@ -11,7 +10,7 @@ const Header = (props) => {
     <div>
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
+        <h2>Welcome to React rift</h2>
       </div>
     </div>
   )

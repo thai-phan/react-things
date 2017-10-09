@@ -1,6 +1,5 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import './Game.css';
 import _ from 'lodash';
 
 var possibleCombinationSum = function (arr, n) {
@@ -40,12 +39,14 @@ const Button = (props) => {
             </button>
             break;
         case false:
-            button = <button className="btn btn-danger">
+            button = <button className="btn btn-danger" onClick={props.redraw}>
                 <FontAwesome name="times" />
             </button>
             break;
         default:
-            button = <button className="btn" disabled={props.selectedNumbers.length === 0} onClick={props.checkAnswer}>=</button>
+            button = <button className="btn" disabled={props.selectedNumbers.length === 0} onClick={props.checkAnswer}>
+                =
+            </button>
             break;
     }
     return (
@@ -203,8 +204,6 @@ class Game extends React.Component {
                             selectNumber={this.selectNumber}
                             usedNumbers={usedNumbers} />
                 }
-
-
             </div>
         )
     }
