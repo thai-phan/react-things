@@ -17,14 +17,8 @@ let AddTodo = ({ dispatch }) => {
           input.value = ''
         }}
       >
-        <input
-          ref={node => {
-            input = node
-          }}
-        />
-        <button type="submit">
-          Add Todo
-        </button>
+        <input ref={node => { input = node }} />
+        <button type="submit">Add Todo</button>
       </form>
     </div>
   )

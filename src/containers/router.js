@@ -10,6 +10,7 @@ import Validate from './Validate/index';
 import Home from './Home/index';
 import Topics from './Topic/index';
 import TodoApp from './Todo/index';
+import TodoSmall from './TodoSmall';
 
 const MasterView = () => (
   <Router>
@@ -20,6 +21,7 @@ const MasterView = () => (
         <li><Link to="/topic">Topics</Link></li>
         <li><Link to="/validate">Validate</Link></li>
         <li><Link to="/todo">To do App</Link></li>
+        <li><Link to="/todosmall">App Small</Link></li>
       </ul>
       <hr />
       <Route exact path="/" component={Home} />
@@ -27,6 +29,7 @@ const MasterView = () => (
       <Route path="/topic" component={Topics} />
       <Route path="/validate" component={Validate} />
       <Route path="/todo" component={TodoApp} />
+      <Route path="/todosmall" component={TodoSmall} />
     </div>
   </Router>
 )
