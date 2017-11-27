@@ -29,16 +29,11 @@ function deleteTodo(index) {
     };
 }
 
-function clearTodo() {
-    return {
-        type: 'CLEAR_TODO'
-    };
-}
-
+let newState;
 function todoApp(state, action) {
     switch (action.type) {
         case 'ADD_TODO':
-            var newState = Object.assign({}, state);
+            newState = Object.assign({}, state);
 
             newState.todo.items.push({
                 message: action.message,
@@ -48,7 +43,7 @@ function todoApp(state, action) {
             return newState;
 
         case 'COMPLETE_TODO':
-            var newState = Object.assign({}, state);
+            newState = Object.assign({}, state);
 
             newState.todo.items[action.index].completed = true;
 
@@ -117,8 +112,8 @@ class TodoItem extends React.Component {
     render() {
         return (
             <li>
-                <a href="#" onClick={this.onCompletedClick.bind(this)} style={{ textDecoration: this.props.completed ? 'line-through' : 'none' }}>{this.props.message.trim()}</a>
-                <a href="#" onClick={this.onDeleteClick.bind(this)} style={{ textDecoration: 'none' }}>[x]</a>
+                <a href="" onClick={this.onCompletedClick.bind(this)} style={{ textDecoration: this.props.completed ? 'line-through' : 'none' }}>{this.props.message.trim()}</a>
+                <a href="" onClick={this.onDeleteClick.bind(this)} style={{ textDecoration: 'none' }}>[x]</a>
             </li>
         );
     }
